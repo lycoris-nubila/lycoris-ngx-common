@@ -1,10 +1,5 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "whitelistedNonPeerDependencies": [
-    "@datorama/akita-ng-forms-manager",
-    "@datorama/akita",
-    "lodash-es"
-  ],
   "dest": "../../dist/lycoris-common",
   "lib": {
     "entryFile": "src/public-api.ts",
