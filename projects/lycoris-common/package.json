@@ -1,11 +1,12 @@
 {
-  "name": "@lycoris-nubila/ngx-lycoris",
-  "version": "2.0.1",
+  "name": "@lycoris-nubila/lycoris-ngx-common",
+  "version": "2.0.0",
+  "private": false,
   "peerDependencies": {
-    "@angular/common": "~12.1.4",
-    "@angular/core": "~12.1.4",
-    "@datorama/akita": "6.2.1",
-    "lodash-es": "4.17.21",
+    "@angular/common": "^12.1.4",
+    "@angular/core": "^12.1.4",
+    "@datorama/akita": "^6.2.1",
+    "lodash-es": "^4.17.21",
     "tslib": "^2.0.0",
     "luxon": "^2.0.1"
   }

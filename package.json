@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build-common": "ng build lycoris-common --configuration production",
-    "publish-common": "cd dist/lycoris-common && npm publish",
+    "publish-common": "cd dist/lycoris-common && npm publish --access public",
     "release-common": "npm run test && npm run build-common && npm run publish-common",
     "test": "npm run build-common && ng test --browsers ChromeHeadless --watch=false lycoris-common",
     "lint": "ng lint",
