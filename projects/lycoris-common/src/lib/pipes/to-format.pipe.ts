@@ -10,7 +10,7 @@ export class ToFormatPipe implements PipeTransform {
   }
 
   transform(
-      value: DateTime, format: string, options: DateTimeFormatOptions): string {
+      value: DateTime, format: string, options?: DateTimeFormatOptions): string {
     return value?.toFormat(format, options);
   }
 
