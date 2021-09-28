@@ -8,6 +8,14 @@ import isDate from 'lodash-es/isDate';
 import isEqual from 'lodash-es/isEqual';
 import {DateTime} from 'luxon';
 
+export function isNotNullish<T>(value: Nullish<T>): value is T {
+  return value !== null && value !== undefined;
+}
+
+export function isNullish<T>(value: Nullish<T>): value is (null | undefined) {
+  return value === null || value === undefined;
+}
+
 export function isEquals(a: any, b: any) {
   return isEqual((a ?? null), (b ?? null));
 }
