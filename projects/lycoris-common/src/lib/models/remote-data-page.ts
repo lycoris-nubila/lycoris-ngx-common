@@ -1,6 +1,6 @@
 export interface RemoteDataPage<T> {
     totalElements?: number;
-    nextPageToken?: string;
+    nextPage?: number;
     fresh: boolean;
     error?: Error;
     data?: T[];

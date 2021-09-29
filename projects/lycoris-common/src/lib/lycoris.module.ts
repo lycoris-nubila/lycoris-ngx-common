@@ -1,4 +1,5 @@
 import {NgModule} from '@angular/core';
+import {DurationPipe} from './pipes/duration.pipe';
 import {NgLetDirective} from './directives/ng-let.directive';
 import {HtmlPipe} from './pipes/html.pipe';
 import {UrlPipe} from './pipes/url.pipe';
@@ -16,6 +17,7 @@ const elements = [
   NullIfEmptyPipe,
   ResourceUrlPipe,
   ToFormatPipe,
+  DurationPipe,
   ToLocaleStringPipe];
 
 @NgModule({

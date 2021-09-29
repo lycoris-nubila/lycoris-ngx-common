@@ -1,5 +1,10 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {DateTime, DateTimeFormatOptions} from 'luxon';
+import {
+  DateTime,
+  DateTimeFormatOptions,
+  Duration,
+  DurationToFormatOptions,
+} from 'luxon';
 
 @Pipe({
   name: 'toFormat',
@@ -10,7 +15,8 @@ export class ToFormatPipe implements PipeTransform {
   }
 
   transform(
-      value: DateTime, format: string, options?: DateTimeFormatOptions): string {
+      value: DateTime | Duration, format: string,
+      options?: DateTimeFormatOptions | DurationToFormatOptions): string {
     return value?.toFormat(format, options);
   }
 
