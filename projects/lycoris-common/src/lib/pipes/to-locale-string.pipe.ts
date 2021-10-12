@@ -6,11 +6,8 @@ import {DateTime, DateTimeFormatOptions, LocaleOptions} from 'luxon';
 })
 export class ToLocaleStringPipe implements PipeTransform {
 
-  constructor() {
-  }
-
   transform(
-      value: DateTime, format: LocaleOptions & DateTimeFormatOptions): string {
+    value: DateTime, format: LocaleOptions & DateTimeFormatOptions): string {
     return value?.toLocaleString(format);
   }
 

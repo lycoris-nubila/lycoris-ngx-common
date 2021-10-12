@@ -1,15 +1,13 @@
 import {Pipe, PipeTransform} from '@angular/core';
+import isNil from 'lodash-es/isNil';
 
 @Pipe({
   name: 'isNil',
 })
 export class IsNilPipe implements PipeTransform {
 
-  constructor() {
-  }
-
   transform(value: unknown): boolean {
-    return !value;
+    return isNil(value);
   }
 
 }

@@ -11,12 +11,9 @@ import {
 })
 export class ToFormatPipe implements PipeTransform {
 
-  constructor() {
-  }
-
   transform(
-      value: DateTime | Duration, format: string,
-      options?: DateTimeFormatOptions | DurationToFormatOptions): string {
+    value: DateTime | Duration, format: string,
+    options?: DateTimeFormatOptions | DurationToFormatOptions): string {
     return value?.toFormat(format, options);
   }
 

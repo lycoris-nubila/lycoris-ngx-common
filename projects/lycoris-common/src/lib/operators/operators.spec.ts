@@ -7,8 +7,8 @@ describe('filterNull', () => {
         expect(await of(null).pipe(filterNull(), isEmpty()).toPromise()).toBeTrue();
     });
 
-    it('should filter undefined', async () => {
-        expect(await of(undefined).pipe(filterNull(), isEmpty()).toPromise()).toBeTrue();
+    it('should not filter undefined', async () => {
+        expect(await of(undefined).pipe(filterNull(), isEmpty()).toPromise()).toBeFalse();
     });
 
     it('should not filter zero', async () => {
@@ -45,12 +45,12 @@ describe('filterNil', () => {
         expect(await of(undefined).pipe(filterNil(), isEmpty()).toPromise()).toBeTrue();
     });
 
-    it('should filter zero', async () => {
-        expect(await of(0).pipe(filterNil(), isEmpty()).toPromise()).toBeTrue();
+    it('should not filter zero', async () => {
+        expect(await of(0).pipe(filterNil(), isEmpty()).toPromise()).toBeFalse();
     });
 
-    it('should filter empty string', async () => {
-        expect(await of('').pipe(filterNil(), isEmpty()).toPromise()).toBeTrue();
+    it('should not filter empty string', async () => {
+        expect(await of('').pipe(filterNil(), isEmpty()).toPromise()).toBeFalse();
     });
 
     it('should not filter empty object', async () => {
