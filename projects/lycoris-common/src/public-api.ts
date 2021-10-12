@@ -23,6 +23,7 @@ export * from './lib/pipes/null-if-empty.pipe';
 export * from './lib/pipes/resource-url.pipe';
 export * from './lib/pipes/resource-url.pipe';
 export * from './lib/pipes/is-nil.pipe';
+export * from './lib/pipes/to-datetime.pipe';
 export * from './lib/pipes/to-format.pipe';
 export * from './lib/lycoris-decorators';
 export * from './lib/pipes/moment.pipe';

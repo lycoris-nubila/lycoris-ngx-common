@@ -8,6 +8,7 @@ import {ToFormatPipe} from './pipes/to-format.pipe';
 import {ToLocaleStringPipe} from './pipes/to-locale-string.pipe';
 import {NullIfEmptyPipe} from './pipes/null-if-empty.pipe';
 import {IsNilPipe} from './pipes/is-nil.pipe';
+import {ToDateTimePipe} from './pipes/to-datetime.pipe';
 
 const elements = [
   NgLetDirective,
@@ -18,6 +19,7 @@ const elements = [
   NullIfEmptyPipe,
   ResourceUrlPipe,
   ToFormatPipe,
+  ToDateTimePipe,
   ToLocaleStringPipe];
 
 @NgModule({
