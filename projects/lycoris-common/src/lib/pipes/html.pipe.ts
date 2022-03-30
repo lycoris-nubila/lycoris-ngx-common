@@ -3,15 +3,15 @@ import {SafeHtml} from '@angular/platform-browser';
 import {DomSanitizer} from '@angular/platform-browser';
 
 @Pipe({
-    name: 'html',
+  name: 'html',
 })
 export class HtmlPipe implements PipeTransform {
 
-    constructor(private sanitizer: DomSanitizer) {
-    }
+  constructor(private sanitizer: DomSanitizer) {
+  }
 
-    transform(value: string): SafeHtml {
-        return this.sanitizer.bypassSecurityTrustHtml(value);
-    }
+  transform(value: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(value ?? '');
+  }
 
 }
