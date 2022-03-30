@@ -2,6 +2,7 @@ import {OnDestroy} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {HashMap} from '@datorama/akita';
 import {
+  AkitaAbstractControl,
   AkitaNgFormsManager,
   ArrayControlFactory,
 } from '@datorama/akita-ng-forms-manager';
@@ -32,6 +33,13 @@ export class FormController<F> implements OnDestroy {
       distinctUntilChanged());
   }
 
+  selectValid(path?: string): Observable<boolean> {
+    return this.formsManager.selectValid(this.formName, path).pipe(
+      retryWhen(
+        errors => errors.pipe(switchMapTo(this.selectValue().pipe(delay(0))))),
+      distinctUntilChanged());
+  }
+
   selectErrors<T = any>(path?: string): Observable<T> {
     return this.formsManager.selectErrors(this.formName, path).pipe(
       retryWhen(
@@ -39,8 +47,8 @@ export class FormController<F> implements OnDestroy {
       distinctUntilChanged());
   }
 
-  selectValid(path?: string): Observable<boolean> {
-    return this.formsManager.selectValid(this.formName, path).pipe(
+  selectControl(path?: string): Observable<AkitaAbstractControl> {
+    return this.formsManager.selectControl(this.formName, path).pipe(
       retryWhen(
         errors => errors.pipe(switchMapTo(this.selectValue().pipe(delay(0))))),
       distinctUntilChanged());
