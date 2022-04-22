@@ -1,5 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {DateTime, DateTimeFormatOptions, LocaleOptions} from 'luxon';
+import {Nullish} from '../lycoris-types';
 
 @Pipe({
   name: 'toLocaleString',
@@ -7,7 +8,8 @@ import {DateTime, DateTimeFormatOptions, LocaleOptions} from 'luxon';
 export class ToLocaleStringPipe implements PipeTransform {
 
   transform(
-    value: DateTime, format: LocaleOptions & DateTimeFormatOptions): string {
+    value: Nullish<DateTime>,
+    format: LocaleOptions & DateTimeFormatOptions): Nullish<string> {
     return value?.toLocaleString(format);
   }
 

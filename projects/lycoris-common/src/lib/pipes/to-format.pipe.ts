@@ -5,6 +5,7 @@ import {
   Duration,
   DurationToFormatOptions,
 } from 'luxon';
+import {Nullish} from '../lycoris-types';
 
 @Pipe({
   name: 'toFormat',
@@ -12,8 +13,8 @@ import {
 export class ToFormatPipe implements PipeTransform {
 
   transform(
-    value: DateTime | Duration, format: string,
-    options?: DateTimeFormatOptions | DurationToFormatOptions): string {
+    value: Nullish<DateTime | Duration>, format: string,
+    options?: DateTimeFormatOptions | DurationToFormatOptions): Nullish<string> {
     return value?.toFormat(format, options);
   }
 
