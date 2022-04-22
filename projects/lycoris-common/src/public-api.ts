@@ -9,6 +9,7 @@ export * from './lib/models/notification-action';
 export * from './lib/models/notification';
 export * from './lib/operators/filter-nullish';
 export * from './lib/operators/filter-empty';
+export * from './lib/operators/filter-error';
 export * from './lib/operators/filter-null';
 export * from './lib/operators/filter-nil';
 export * from './lib/operators/catch-to';

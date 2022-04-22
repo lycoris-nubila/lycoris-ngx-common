@@ -1,6 +1,6 @@
 {
   "name": "@lycoris-nubila/lycoris-ngx-common",
-  "version": "2.1.5",
+  "version": "2.1.7",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^12.1.4",
