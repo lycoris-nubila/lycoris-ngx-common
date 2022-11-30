@@ -7,7 +7,7 @@ import {Nullish} from '../lycoris-types';
 })
 export class NullIfEmptyPipe implements PipeTransform {
 
-  transform<T>(value: T[]): Nullish<T[]> {
+  transform<T>(value: Nullish<T[]>): Nullish<T[]> {
     return isEmpty(value) ? null : value;
   }
 

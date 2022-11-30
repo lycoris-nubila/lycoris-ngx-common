@@ -9,6 +9,8 @@ import {ToLocaleStringPipe} from './pipes/to-locale-string.pipe';
 import {NullIfEmptyPipe} from './pipes/null-if-empty.pipe';
 import {IsNilPipe} from './pipes/is-nil.pipe';
 import {ToDateTimePipe} from './pipes/to-datetime.pipe';
+import {BlankIfNullPipe} from './pipes/blank-if-null.pipe';
+import {EmptyIfNullPipe} from './pipes/empty-if-null.pipe';
 
 const elements = [
   NgLetDirective,
@@ -16,6 +18,8 @@ const elements = [
   UrlPipe,
   IsNilPipe,
   NullIfEmptyPipe,
+  BlankIfNullPipe,
+  EmptyIfNullPipe,
   ResourceUrlPipe,
   ToFormatPipe,
   ToDateTimePipe,

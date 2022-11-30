@@ -20,6 +20,8 @@ export * from './lib/directives/ng-let.directive';
 export * from './lib/controllers/component.controller';
 export * from './lib/pipes/to-locale-string.pipe';
 export * from './lib/pipes/null-if-empty.pipe';
+export * from './lib/pipes/empty-if-null.pipe';
+export * from './lib/pipes/blank-if-null.pipe';
 export * from './lib/pipes/resource-url.pipe';
 export * from './lib/pipes/is-nil.pipe';
 export * from './lib/pipes/to-datetime.pipe';
